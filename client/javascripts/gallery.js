@@ -34,11 +34,13 @@ let controller = function () {
   });
 };
 
-$(document).ready(controller);
+//$(document).ready(controller);
 
-//without using jQuery
+//Register the controller after the DOM is complete
+window.addEventListener("load", function() {
+  //select the button
+  let button = document.querySelector("button");
 
-window.addEventListener("load", function () {
-  //select the button and register the handler
-  document.querySelector("button").addEventListener("click", controller);
+  //register the click handler for the button
+  button.addEventListener("click", controller);
 });
