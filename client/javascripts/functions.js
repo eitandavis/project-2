@@ -1,5 +1,4 @@
 // jshint esversion: 7
-
 //function to reverse a single word
 let reverseWord = word => {
   var newString = "";
